@@ -1,0 +1,172 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Session;
+
+class AdminController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index(Request $request)
+    {
+        // Neu chua login (kiem tra session)
+        if ($request->session()->get('user')) {
+          return $this->menus($request);
+        }
+        return view('admin/login');
+        // Neu login roi return view('admin/menu');
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
+    public function logout(Request $request) {
+      // Xoa session user
+      $request->session()->forget('user');
+      return view('admin/login');
+    }
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function login(Request $request)
+    {
+        //Kiem tra user dang nhap
+        $username = $request->input('uname'); // Doc input Username
+        $pass = $request->input('psw'); // doc input password
+        // Doc file json va so sanh voi bien request
+		     $checkLogin = false;
+
+
+        $path = storage_path() . ".../json/admin.json"; // ie: /var/www/laravel/app/storage/json/filename.json
+        $data = json_decode(file_get_contents($path), true);
+        // dd($users);
+        $user = array();
+        foreach ($data['users'] as $con) {
+            if ($username == $con['uname']) {
+              $user = $con;
+              break;
+            }
+        }
+
+        if (count($user) && $user['psw'] == $pass) {
+          //Neu checkLogin true thi cho dang nhap, nguoc lai thi ko
+
+          // for users : neu uname = $request->input('uname'); => kiem tra pass, return login,
+          // Session -> luu user vao session
+          // $session = new Session;
+          // $session->set([uname=>$request->input('uname'), pass => ]);
+          $request->session()->put('user', $user);
+
+          return $this->menus($request);
+        }
+
+
+
+        return view('admin/login');
+    }
+
+    public function menus(Request $request)
+    {
+      // Kiem tra chua login thi vao trang login lai
+      if (!$request->session()->get('user')) {
+        return view('admin/login');
+      }
+        $path = storage_path() . "/json/menu.json"; // ie: /var/www/laravel/app/storage/json/filename.json
+        $data = json_decode(file_get_contents($path), true);
+
+
+        // for users : neu uname = $request->input('uname'); => kiem tra pass, return login,
+        // Session -> luu user vao session
+        // $session = new Session;
+        // $session->set([uname=>$request->input('uname'), pass => ]);
+
+        return view('admin/menus', ['data' => $data['menus']]);
+    }
+    public function slider(Request $request)
+    {
+      // Kiem tra chua login thi vao trang login lai
+      if (!$request->session()->get('user')) {
+        return view('admin/login');
+      }
+        // $path = storage_path() . "/json/menu.json"; // ie: /var/www/laravel/app/storage/json/filename.json
+        // $menus = json_decode(file_get_contents($path), true);
+        //
+        //
+        // // for users : neu uname = $request->input('uname'); => kiem tra pass, return login,
+        // // Session -> luu user vao session
+        // // $session = new Session;
+        // // $session->set([uname=>$request->input('uname'), pass => ]);
+        //
+        // return view('admin/menus', ['data' => $menus]);
+    }
+}
