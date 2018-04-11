@@ -7,7 +7,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="admin_asset/index.html">Admin Tu Nhien</a>
+                <a class="navbar-brand" href="admin_asset/index.html">Trang Quản Trị </a>
             </div>
             <!-- /.navbar-header -->
 
