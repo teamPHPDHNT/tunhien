@@ -29,46 +29,47 @@ Route::group(['prefix'=>'admin'],function(){
 	});
 
 	Route::group(['prefix'=>'slide'],function(){
-		// admin/menu/danhsach
+		// admin/slide/danhsach
 		Route::get('danhsach','SlideController@getDanhsach');
-		// admin/menu/sua
+		// admin/slide/sua
 		Route::get('sua','SlideController@getSua');
-		// admin/menu/them
+		// admin/slide/them
 		Route::get('them','SlideController@getThem');
 	});
 
 	Route::group(['prefix'=>'baiviet'],function(){
-		// admin/menu/danhsach
+		// admin/baiviet/danhsach
 		Route::get('danhsach','BaiVietController@getDanhsach');
-		// admin/menu/sua
+		// admin/baiviet/sua
 		Route::get('sua','BaiVietController@getSua');
-		// admin/menu/them
+		// admin/baiviet/them
 		Route::get('them','BaiVietController@getThem');
 	});
 
 	Route::group(['prefix'=>'sanpham'],function(){
-		// admin/menu/danhsach
+		// admin/sanpham/danhsach
 		Route::get('danhsach','SanPhamController@getDanhsach');
-		// admin/menu/sua
+		// admin/sanpham/sua
 		Route::get('sua','SanPhamController@getSua');
-		// admin/menu/them
+		// admin/sanpham/them
 		Route::get('them','SanPhamController@getThem');
 	});
 
 	Route::group(['prefix'=>'loithe'],function(){
-		// admin/menu/danhsach
+		// admin/loithe/danhsach
 		Route::get('danhsach','LoiTheController@getDanhsach');
-		// admin/menu/sua
+		// admin/loithe/sua
 		Route::get('sua','LoiTheController@getSua');
-		// admin/menu/them
+		// admin/loithe/them
 		Route::get('them','LoiTheController@getThem');
 	});
 
 	Route::group(['prefix'=>'thongke'],function(){
-		// admin/menu/danhsach
+		// admin/thongke/danhsach
 		Route::get('danhsach','ThongKeController@getDanhsach');
+		// admin/thongke/sua
 		Route::get('sua','ThongKeController@getSua');
-		// admin/menu/them
+		// admin/thongke/them
 		Route::get('them','ThongKeController@getThem');
 	});
 });

@@ -8,7 +8,7 @@ class SanPhamController extends Controller
 {
     public function getDanhSach()
     {   
-        $path = storage_path() . "/app/product.json";
+        $path = storage_path() . "/app/sanpham.json";
         $menu = json_decode(file_get_contents($path), true);
         return view('admin.sanpham.danhsach',compact('sanpham'));
     }
