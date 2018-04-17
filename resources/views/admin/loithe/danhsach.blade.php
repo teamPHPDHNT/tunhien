@@ -22,7 +22,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($loithe['loithe'] as $lt)
+                        @foreach($loithe as $lt)
                         <tr class="odd gradeX" align="center">
                             <td>{{$lt['noidung']}}</td>
                             <td>{{$lt['icon']}}</td>

@@ -21,7 +21,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($slide['slide'] as $sl)
+                        @foreach($slide as $sl)
                         <tr class="odd gradeX" align="center">
                             <td>{{$sl['id']}}</td>
                             <td>{{$sl['images']}}</td>

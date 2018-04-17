@@ -1,8 +1,6 @@
-{
-	"sanpham": [
+ [
 		{"id":1, "name":"SỮA RỮA MẶT DABO", "images":"memoire-lavender.png"},
 		{"id":2, "name":"SET WHOO MINI ĐỎ", "images":"memoire-olive.png"},
 		{"id":3, "name":"MẶT NẠ CHERRY", "images":"memoire-olive5.png"},
 		{"id":4, "name":"PHẤN NỀN CHANEL", "images":"memoire-mp-2.png"}
 	]
-}

@@ -15,20 +15,20 @@
                     <thead>
                         <tr align="center">
                             <th>ID</th>
-                            <th>Tên</th>
-                            <th>Hình Ảnh</th>
+                            <th>Loại</th>
+                            <th>Số lượng</th>
                             <th>Delete</th>
                             <th>Edit</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($sanpham['sanpham'] as $sp)
+                        @foreach($thongke as $tk)
                         <tr class="odd gradeX" align="center">
-                            <td>{{$sp['id']}}</td>
-                            <td>{{$sp['name']}}</td>
-                            <td>{{$sp['image']}}</td>
+                            <td>{{$tk['id']}}</td>
+                            <td>{{$tk['loai']}}</td>
+                            <td>{{$tk['soluong']}}</td>
                             <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="xoa"> Delete</a></td>
-                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/sanpham/sua">Edit</a></td>
+                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/thongke/sua">Edit</a></td>
                         </tr>
                         @endforeach
                     </tbody>

@@ -22,7 +22,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($menu['menu'] as $mn)
+                        @foreach($menu as $mn)
                         <tr class="odd gradeX" align="center">
                             <td>{{$mn['id']}}</td>
                             <td>{{$mn['name']}}</td>

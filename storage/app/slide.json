@@ -1,7 +1,6 @@
-{
-	"slide":[
+[
 		{"id":1, "images":"image/s1.jpg"},
 		{"id":2, "images":"image/s2.jpg"},
 		{"id":3, "images":"image/s3.jpg"}
-	]
-}
+]
+

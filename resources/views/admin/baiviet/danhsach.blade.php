@@ -22,7 +22,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($baiviet['baiviet'] as $bv)
+                        @foreach($baiviet as $bv)
                         <tr class="odd gradeX" align="center">
                             <td>{{$bv['danhmuc']}}</td>
                             <td>{{$bv['icon']}}</td>

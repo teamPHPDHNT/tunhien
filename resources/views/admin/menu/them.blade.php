@@ -24,7 +24,7 @@
                                 <input class="form-control" name="link" placeholder="Nhập đường link" />
                     </div>
                     <button type="submit" class="btn btn-default">Thêm</button>
-                    <button type="reset" class="btn btn-default">Quay lại</button>
+                    <button type="reset" class="btn btn-default">Làm mới</button>
                 </form>
             </div>
         </div>

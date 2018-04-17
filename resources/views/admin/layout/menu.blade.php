@@ -34,7 +34,7 @@
                                     <a href="admin/baiviet/danhsach">Danh sách</a>
                                 </li>
                                 <li>
-                                    <a href="#">Thêm</a>
+                                    <a href="admin/baiviet/them">Thêm</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -46,7 +46,7 @@
                                     <a href="admin/sanpham/danhsach">Danh sách</a>
                                 </li>
                                 <li>
-                                    <a href="#">Thêm</a>
+                                    <a href="admin/sanpham/them">Thêm</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -58,7 +58,7 @@
                                     <a href="admin/slide/danhsach">Danh sách</a>
                                 </li>
                                 <li>
-                                    <a href="#">Thêm</a>
+                                    <a href="admin/slide/them">Thêm</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -70,7 +70,7 @@
                                     <a href="admin/loithe/danhsach">Danh sách</a>
                                 </li>
                                 <li>
-                                    <a href="#">Thêm</a>
+                                    <a href="admin/loithe/them">Thêm</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -82,7 +82,7 @@
                                     <a href="admin/thongke/danhsach">Danh sách</a>
                                 </li>
                                 <li>
-                                    <a href="#">Thêm</a>
+                                    <a href="admin/thongke/them">Thêm</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->

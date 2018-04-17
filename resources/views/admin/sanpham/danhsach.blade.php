@@ -22,11 +22,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($sanpham['sanpham'] as $sp)
+                        @foreach($sanpham as $sp)
                         <tr class="odd gradeX" align="center">
                             <td>{{$sp['id']}}</td>
                             <td>{{$sp['name']}}</td>
-                            <td>{{$sp['image']}}</td>
+                            <td>{{$sp['images']}}</td>
                             <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="xoa"> Delete</a></td>
                             <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/sanpham/sua">Edit</a></td>
                         </tr>

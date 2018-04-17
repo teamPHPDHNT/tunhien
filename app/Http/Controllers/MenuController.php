@@ -17,14 +17,22 @@ class MenuController extends Controller
     {
     	return view('admin.menu.them');
     }
-    public function postThem(Request $request)
+    public function postThem()
     {
-        $ten=$request->input('name');
-        $ddan=$request->input('link');
         $path = storage_path() . "/app/menu.json";
-        $menu['menu']=[['id'=>1,'name'=>$ten,'link'=>$ddan]];
-        $var = file_put_contents($path,json_encode($menu));
-        return view('admin/menu/them',compact('menu')); 
+        $current_data = file_get_contents($path);  
+        $array_data = json_decode($current_data, true);  
+        $last_item    = end($array_data);
+        $last_item_id = $last_item['id'];
+        $extra = array(  
+            'id'             => ++$last_item_id,
+            'name'          =>     $_POST["name"],  
+            'link'     =>     $_POST["link"]  
+        );  
+        $array_data[] = $extra;  
+        $final_data = json_encode($array_data);  
+        file_put_contents($path, $final_data);
+        return view('admin/menu/them',compact('final_data'));   
     }
     public function getSua()
     {
