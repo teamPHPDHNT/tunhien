@@ -19,7 +19,7 @@
                                         <input class="form-control" name="loai" placeholder="Nhập tên loại thống kê" />
                                 </div>
                                 <div class="form-group">
-                                    <label>Số kê :</label>
+                                    <label>Số thống kê :</label>
                                         <input class="form-control" type ="number" name="soluong" placeholder="Nhập số lượng" />
                                 </div>
                                 <button type="submit" class="btn btn-default">Thêm</button>
