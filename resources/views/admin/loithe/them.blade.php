@@ -16,7 +16,7 @@
                     <input type="hidden" name="_token" value="{{csrf_token()}}"/>
                         <div class="form-group">
                             <label>Nội Dung :</label>
-                                <input class="form-control" name="danhmuc" placeholder="Nhập nội dung lợi thế" />
+                                <input class="form-control" name="noidung" placeholder="Nhập nội dung lợi thế" />
                         </div>
                         <div class="form-group">
                             <label>Icon :</label>

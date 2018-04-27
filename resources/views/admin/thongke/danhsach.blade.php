@@ -27,8 +27,8 @@
                             <td>{{$tk['id']}}</td>
                             <td>{{$tk['loai']}}</td>
                             <td>{{$tk['soluong']}}</td>
-                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="xoa"> Delete</a></td>
-                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/thongke/sua">Edit</a></td>
+                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="{{route('admin.thongke.delete', $tk['id'])}}"> Delete</a></td>
+                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="{{route('admin.thongke.edit', $tk['id'])}}">Edit</a></td>
                         </tr>
                         @endforeach
                     </tbody>

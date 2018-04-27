@@ -33,8 +33,54 @@ class SanPhamController extends Controller
         file_put_contents($path, $final_data);
         return view('admin/sanpham/them',compact('final_data'));   
     }
-    public function getSua()
+    public function getSua($id)
     {
-    	return view('admin.sanpham.sua');
+        $data = [
+            'id' => $id,
+            'name' => 'Menu sadsadsad',
+            'images' => 'Link 1',
+        ];
+        return view('admin.sanpham.sua', compact('data'));
+    }
+
+    public function postSua($id, Request $request)
+    {
+        $path = storage_path() . "/app/sanpham.json";
+        $current_data = file_get_contents($path);
+        $json = json_decode($current_data, true);
+        $item = array("id" => $request->id, "name" => $request->name, "images" => $request->images);
+
+        $sanpham = array();
+        foreach ($json as $key => $value) {
+            if ($id == $value["id"]) {
+                array_push($sanpham, $item);
+            } else {
+                array_push($sanpham, $value);
+            }
+        }
+        $final_data = json_encode($sanpham);  
+        file_put_contents($path, $final_data);
+        return view('admin.sanpham.danhsach',compact('sanpham'));
+    }
+
+    public function getXoa($id)
+    {
+        $path = storage_path() . "/app/sanpham.json";
+        $current_data = file_get_contents($path);
+        $sanpham = json_decode($current_data, true);
+        $arr_index = 0;
+
+        foreach($sanpham as $key => $value) {
+            if ($value['id'] == $id) {
+                $arr_index=$key;
+            }
+        }
+
+        unset($sanpham[$arr_index]);
+        
+        $final_data = json_encode($sanpham); 
+        file_put_contents($path,$final_data);
+
+        return redirect()->route('admin.sanpham.danhsach');
     }
 }

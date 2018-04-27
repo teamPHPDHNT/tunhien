@@ -6,7 +6,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                        <h1 class="page-header">Menu
+                        <h1 class="page-header">Sản Phẩm
                             <small>Danh Sách</small>
                         </h1>
             </div>
@@ -27,8 +27,8 @@
                             <td>{{$sp['id']}}</td>
                             <td>{{$sp['name']}}</td>
                             <td>{{$sp['images']}}</td>
-                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="xoa"> Delete</a></td>
-                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/sanpham/sua">Edit</a></td>
+                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="{{route('admin.sanpham.delete', $sp['id'])}}"> Delete</a></td>
+                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="{{route('admin.sanpham.edit', $sp['id'])}}">Edit</a></td>
                         </tr>
                         @endforeach
                     </tbody>

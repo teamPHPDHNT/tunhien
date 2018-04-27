@@ -33,8 +33,54 @@ class ThongKeController extends Controller
         file_put_contents($path, $final_data);
         return view('admin/thongke/them',compact('final_data'));   
     }
-    public function getSua()
+    public function getSua($id)
     {
-    	return view('admin.thongke.sua');
+        $data = [
+            'id' => $id,
+            'loai' => 'Menu sadsadsad',
+            'soluong' => 'Link 1',
+        ];
+        return view('admin.thongke.sua', compact('data'));
+    }
+
+    public function postSua($id, Request $request)
+    {
+        $path = storage_path() . "/app/thongke.json";
+        $current_data = file_get_contents($path);
+        $json = json_decode($current_data, true);
+        $item = array("id" => $request->id, "loai" => $request->loai, "soluong" => $request->soluong);
+
+        $thongke = array();
+        foreach ($json as $key => $value) {
+            if ($id == $value["id"]) {
+                array_push($thongke, $item);
+            } else {
+                array_push($thongke, $value);
+            }
+        }
+        $final_data = json_encode($thongke);  
+        file_put_contents($path, $final_data);
+        return view('admin.thongke.danhsach',compact('thongke'));
+    }
+
+    public function getXoa($id)
+    {
+        $path = storage_path() . "/app/thongke.json";
+        $current_data = file_get_contents($path);
+        $thongke = json_decode($current_data, true);
+        $arr_index = 0;
+
+        foreach($thongke as $key => $value) {
+            if ($value['id'] == $id) {
+                $arr_index=$key;
+            }
+        }
+
+        unset($thongke[$arr_index]);
+        
+        $final_data = json_encode($thongke); 
+        file_put_contents($path,$final_data);
+
+        return redirect()->route('admin.thongke.danhsach');
     }
 }

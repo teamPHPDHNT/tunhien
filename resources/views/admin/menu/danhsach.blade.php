@@ -27,8 +27,8 @@
                             <td>{{$mn['id']}}</td>
                             <td>{{$mn['name']}}</td>
                             <td>{{$mn['link']}}</td>
-                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="xoa"> Delete</a></td>
-                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="#">Edit</a></td>
+                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="{{route('admin.menu.delete', $mn['id'])}}" onclick="confirm('Are you want delete')"> Delete</a></td>
+                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="{{route('admin.menu.edit', $mn['id'])}}">Edit</a></td>
                         </tr>
                         @endforeach
                     </tbody>

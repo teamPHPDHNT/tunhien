@@ -1,5 +1,1 @@
-[
-		{"id":1, "loai":"MÁY MÓC THIẾT BỊ", "soluong":"3310"},
-		{"id":2, "loai":"DIỆN TÍCH MẶT BẰNG", "soluong":"1500"},
-		{"id":3, "loai":"ĐỘI NGŨ LAO ĐỘNG", "soluong":"4120"}
-	]
+[{"id":1,"loai":"M\u00c1Y M\u00d3C THI\u1ebeT B\u1eca","soluong":"3310"},{"id":2,"loai":"DI\u1ec6N T\u00cdCH M\u1eb6T B\u1eb0NG","soluong":"1500"},{"id":3,"loai":"\u0110\u1ed8I NG\u0168 LAO \u0110\u1ed8NG","soluong":"4120"}]

@@ -20,68 +20,80 @@ Route::get('/', function () {
 Route::group(['prefix'=>'admin'],function(){
 	Route::group(['prefix'=>'menu'],function(){
 		// admin/menu/danhsach
-		Route::get('danhsach','MenuController@getDanhSach');
-		// admin/menu/sua
-		Route::get('sua','MenuController@getSua');
-		Route::post('sua','MenuController@postSua');
-		// admin/menu/them
+		Route::get('danhsach','MenuController@getDanhSach')->name('admin.menu.danhsach');
+
+		Route::get('sua/{id}','MenuController@getSua')->name('admin.menu.edit');
+		Route::post('sua/{id}','MenuController@postSua')->name('admin.menu.update');
+		
 		Route::get('them','MenuController@getThem');
 		Route::post('them','MenuController@postThem');
+
+		Route::get('xoa/{id}','MenuController@getXoa')->name('admin.menu.delete');
 	});
 
 	Route::group(['prefix'=>'slide'],function(){
-		// admin/slide/danhsach
-		Route::get('danhsach','SlideController@getDanhsach');
-		// admin/slide/sua
-		Route::get('sua','SlideController@getSua');
-		Route::post('sua','SlideController@postSua');
-		// admin/slide/them
+		
+		Route::get('danhsach','SlideController@getDanhsach')->name('admin.slide.danhsach');
+		
+		Route::get('sua/{id}','SlideController@getSua')->name('admin.slide.edit');
+		Route::post('sua/{id}','SlideController@postSua')->name('admin.slide.update');
+		
 		Route::get('them','SlideController@getThem');
 		Route::post('them','SlideController@postThem');
+
+		Route::get('xoa/{id}','SlideController@getXoa')->name('admin.slide.delete');
 	});
 
 	Route::group(['prefix'=>'baiviet'],function(){
-		// admin/baiviet/danhsach
-		Route::get('danhsach','BaiVietController@getDanhsach');
-		// admin/baiviet/sua
-		Route::get('sua','BaiVietController@getSua');
-		Route::post('sua','BaiVietController@postSua');
-		// admin/baiviet/them
+		
+		Route::get('danhsach','BaiVietController@getDanhsach')->name('admin.baiviet.danhsach');
+		
+		Route::get('sua/{id}','BaiVietController@getSua')->name('admin.baiviet.edit');
+		Route::post('sua/{id}','BaiVietController@postSua')->name('admin.baiviet.update');
+		
 		Route::get('them','BaiVietController@getThem');
 		Route::post('them','BaiVietController@postThem');
+
+		Route::get('xoa/{id}','BaiVietController@getXoa')->name('admin.baiviet.delete');
 	});
 
 	Route::group(['prefix'=>'sanpham'],function(){
-		// admin/sanpham/danhsach
-		Route::get('danhsach','SanPhamController@getDanhsach');
-		// admin/sanpham/sua
-		Route::get('sua','SanPhamController@getSua');
-		Route::post('sua','SanPhamController@postSua');
-		// admin/sanpham/them
+		
+		Route::get('danhsach','SanPhamController@getDanhsach')->name('admin.sanpham.danhsach');
+		
+		Route::get('sua/{id}','SanPhamController@getSua')->name('admin.sanpham.edit');
+		Route::post('sua/{id}','SanPhamController@postSua')->name('admin.sanpham.update');
+		
 		Route::get('them','SanPhamController@getThem');
 		Route::post('them','SanPhamController@postThem');
+
+		Route::get('xoa/{id}','SanPhamController@getXoa')->name('admin.sanpham.delete');
 	});
 
 	Route::group(['prefix'=>'loithe'],function(){
-		// admin/loithe/danhsach
-		Route::get('danhsach','LoiTheController@getDanhsach');
-		// admin/loithe/sua
-		Route::get('sua','LoiTheController@getSua');
-		Route::post('sua','LoiTheController@posttSua');
-		// admin/loithe/them
+		
+		Route::get('danhsach','LoiTheController@getDanhsach')->name('admin.loithe.danhsach');
+		
+		Route::get('sua/{id}','LoiTheController@getSua')->name('admin.loithe.edit');
+		Route::post('sua/{id}','LoiTheController@postSua')->name('admin.loithe.update');
+		
 		Route::get('them','LoiTheController@getThem');
 		Route::post('them','LoiTheController@postThem');
+
+		Route::get('xoa/{id}','LoiTheController@getXoa')->name('admin.loithe.delete');
 	});
 
 	Route::group(['prefix'=>'thongke'],function(){
-		// admin/thongke/danhsach
-		Route::get('danhsach','ThongKeController@getDanhsach');
-		// admin/thongke/sua
-		Route::get('sua','ThongKeController@getSua');
-		Route::post('sua','ThongKeController@postSua');
-		// admin/thongke/them
+		
+		Route::get('danhsach','ThongKeController@getDanhsach')->name('admin.thongke.danhsach');
+		
+		Route::get('sua/{id}','ThongKeController@getSua')->name('admin.thongke.edit');
+		Route::post('sua/{id}','ThongKeController@postSua')->name('admin.thongke.update');
+		
 		Route::get('them','ThongKeController@getThem');
 		Route::post('them','ThongKeController@postThem');
+
+		Route::get('xoa/{id}','ThongKeController@getXoa')->name('admin.thongke.delete');
 	});
 });
 

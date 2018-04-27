@@ -32,8 +32,53 @@ class SlideController extends Controller
         file_put_contents($path, $final_data);
         return view('admin/slide/them',compact('final_data'));   
     }
-    public function getSua()
+    public function getSua($id)
     {
-    	return view('admin.slide.sua');
+        $data = [
+            'id' => $id,
+            'images' => 'Menu sadsadsad',
+        ];
+        return view('admin.slide.sua', compact('data'));
+    }
+
+    public function postSua($id, Request $request)
+    {
+        $path = storage_path() . "/app/slide.json";
+        $current_data = file_get_contents($path);
+        $json = json_decode($current_data, true);
+        $item = array("id" => $request->id, "images" => $request->images);
+
+        $slide = array();
+        foreach ($json as $key => $value) {
+            if ($id == $value["id"]) {
+                array_push($slide, $item);
+            } else {
+                array_push($slide, $value);
+            }
+        }
+        $final_data = json_encode($slide);  
+        file_put_contents($path, $final_data);
+        return view('admin.slide.danhsach',compact('slide'));
+    }
+
+    public function getXoa($id)
+    {
+        $path = storage_path() . "/app/slide.json";
+        $current_data = file_get_contents($path);
+        $slide = json_decode($current_data, true);
+        $arr_index = 0;
+
+        foreach($slide as $key => $value) {
+            if ($value['id'] == $id) {
+                $arr_index=$key;
+            }
+        }
+
+        unset($slide[$arr_index]);
+        
+        $final_data = json_encode($slide); 
+        file_put_contents($path,$final_data);
+
+        return redirect()->route('admin.slide.danhsach');
     }
 }

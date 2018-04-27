@@ -14,6 +14,7 @@
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr align="center">
+                            <th>ID</th>
                             <th>Danh mục</th>
                             <th>Icon</th>
                             <th>Mô tả</th>
@@ -24,11 +25,12 @@
                     <tbody>
                         @foreach($baiviet as $bv)
                         <tr class="odd gradeX" align="center">
+                            <td>{{$bv['id']}}</td>
                             <td>{{$bv['danhmuc']}}</td>
                             <td>{{$bv['icon']}}</td>
                             <td>{{$bv['mota']}}</td>
-                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="xoa"> Delete</a></td>
-                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/baiviet/sua">Edit</a></td>
+                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="{{route('admin.baiviet.delete', $bv['id'])}}"> Delete</a></td>
+                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="{{route('admin.baiviet.edit', $bv['id'])}}">Edit</a></td>
                         </tr>
                         @endforeach
                     </tbody>

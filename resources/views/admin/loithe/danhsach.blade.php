@@ -14,6 +14,7 @@
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr align="center">
+                            <th>ID</th>
                             <th>Nội dung</th>
                             <th>Icon</th>
                             <th>Mô tả</th>
@@ -24,11 +25,12 @@
                     <tbody>
                         @foreach($loithe as $lt)
                         <tr class="odd gradeX" align="center">
+                            <td>{{$lt['id']}}</td>
                             <td>{{$lt['noidung']}}</td>
                             <td>{{$lt['icon']}}</td>
                             <td>{{$lt['mota']}}</td>
-                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="xoa"> Delete</a></td>
-                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/loithe/sua">Edit</a></td>
+                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="{{route('admin.loithe.delete', $lt['id'])}}"> Delete</a></td>
+                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="{{route('admin.loithe.edit', $lt['id'])}}">Edit</a></td>
                         </tr>
                         @endforeach
                     </tbody>

@@ -1,8 +1,8 @@
- [
+[
+	
 	    {"id":1, "name":"TRANG CHỦ", "link":"#"},
 	    {"id":2, "name":"TỰ NHIÊN", "link":"http://tunhienvn.com/dodungkhachsan.php"},
 	    {"id":3, "name":"ĐẠI PHÁT", "link":"http://dodungphongkhachsan.vn/"},
 	    {"id":4, "name":"DRCO.VN", "link":"http://dorco.vn/"},
 	    {"id":5, "name":"SPANATURAL", "link":"http://spanatural.vn/"}
-	]
-
+]

@@ -1,5 +1,1 @@
-[
-	{"noidung":"GIAO HÀNG NHANH", "icon":"fa.fa-struck", "mota":"Đội ngũ giao hàng của tư nhiên.."},
-	{"noidung":"SẢN XUẤT-CUNG CẤP", "icon":"fa.fa-cogs","mota":"Công ty chúng tôi nhận sản xuất.."},
-	{"noidung":"TƯ VẤN MIỄN PHÍ", "icon":"a.fa-users", "mota":"Với đội ngũ chăm sóc khách hàng.."}
-]
+[{"id":1,"noidung":"GIAO H\u00c0NG NHANH","icon":"fa.fa-struck","mota":"\u0110\u1ed9i ng\u0169 giao h\u00e0ng c\u1ee7a t\u01b0 nhi\u00ean.."},{"id":2,"noidung":"S\u1ea2N XU\u1ea4T-CUNG C\u1ea4P","icon":"fa.fa-cogs","mota":"C\u00f4ng ty ch\u00fang t\u00f4i nh\u1eadn s\u1ea3n xu\u1ea5t.."},{"id":3,"noidung":"T\u01af V\u1ea4N MI\u1ec4N PH\u00cd","icon":"a.fa-users","mota":"V\u1edbi \u0111\u1ed9i ng\u0169 ch\u0103m s\u00f3c kh\u00e1ch h\u00e0ng.."}]

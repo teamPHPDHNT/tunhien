@@ -25,8 +25,8 @@
                         <tr class="odd gradeX" align="center">
                             <td>{{$sl['id']}}</td>
                             <td>{{$sl['images']}}</td>
-                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="xoa"> Delete</a></td>
-                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/slide/sua">Edit</a></td>
+                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="{{route('admin.slide.delete', $sl['id'])}}"> Delete</a></td>
+                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="{{route('admin.slide.edit', $sl['id'])}}">Edit</a></td>
                         </tr>
                         @endforeach
                     </tbody>

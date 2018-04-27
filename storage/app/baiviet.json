@@ -1,6 +1,1 @@
-[
-		{"danhmuc":"Thiết bị hiện đại", "icon":"fa-setting","mota":"Với máy móc hiện đại như dây chuyền sản xuất bàn chải..."},
-		{"danhmuc":"Quản lý chuyên nghiệp", "icon":"fa-user", "mota":"Đọi ngũ lãnh đạo..."},
-		{"danhmuc":"Chiến lược phát triển", "icon":"fa fa-paper-plane", "mota":"CHIẾN LƯỢC PHÁT TRIỂN: ngay từ những ngày thành lập..."},
-		{"danhmuc":"Sản phẩm chất lượng", "icon":"fa.fa-archive", "mota":"Công ty chúng Tôi thành lập từ..."}
-	]
+[{"id":1,"danhmuc":"Thi\u1ebft b\u1ecb hi\u1ec7n \u0111\u1ea1i","icon":"fa-setting","mota":"V\u1edbi m\u00e1y m\u00f3c hi\u1ec7n \u0111\u1ea1i nh\u01b0 d\u00e2y chuy\u1ec1n s\u1ea3n xu\u1ea5t b\u00e0n ch\u1ea3i..."},{"id":2,"danhmuc":"Qu\u1ea3n l\u00fd chuy\u00ean nghi\u1ec7p","icon":"fa-user","mota":"\u0110\u1ecdi ng\u0169 l\u00e3nh \u0111\u1ea1o..."},{"id":3,"danhmuc":"Chi\u1ebfn l\u01b0\u1ee3c ph\u00e1t tri\u1ec3n","icon":"fa fa-paper-plane","mota":"CHI\u1ebeN L\u01af\u1ee2C PH\u00c1T TRI\u1ec2N: ngay t\u1eeb nh\u1eefng ng\u00e0y th\u00e0nh l\u1eadp..."},{"id":4,"danhmuc":"S\u1ea3n ph\u1ea9m ch\u1ea5t l\u01b0\u1ee3ng","icon":"fa.fa-archive","mota":"C\u00f4ng ty ch\u00fang T\u00f4i th\u00e0nh l\u1eadp t\u1eeb..."}]
